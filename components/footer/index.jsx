@@ -8,7 +8,7 @@ import ApplePodcasts from '../../public/applePodcasts.png'
 const Footer = ({ footer, podcasts, menu }) => (
     <footer
       className="container mx-auto"
-      role="content-info">
+      role="contentinfo">
       <div className="flex flex-col pb-[40px] pt-[50px] lg:flex-row lg:place-content-between lg:px-[10px] lg:mt-[50px]">
         <div className="py-[20px]">
           <div className="relative w-[180px] h-[77px] m-auto lg:ml-[0px]">

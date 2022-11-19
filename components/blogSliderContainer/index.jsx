@@ -54,12 +54,14 @@ const BlogSlider = ({ posts }) => {
       </div>
       <div className="flex justify-center content-center items-center">
         <button
+          type='button'
           aria-label="Previous"
           className="text-textColor mx-[15px] text-[19px]"
           onClick={() => slider?.current?.slickPrev()}>
           <AiOutlineArrowLeft />
         </button>
         <button
+          type='button'
           aria-label="Next"
           className="text-textColor mx-[15px] text-[19px]"
           onClick={() => slider?.current?.slickNext()}>

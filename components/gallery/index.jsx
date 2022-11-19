@@ -19,8 +19,10 @@ const Gallery = ({ gallery }) => {
       <div className={`gallery ${gallery.length === 10 ? 'complete' : ''}`}>
         {gallery.map((imgSingle, i) => (
             <div
+              role="presentation"
               key={i}
               onClick={() => copyUrl(imgSingle.sourceUrl)}
+              onKeyDown={() => copyUrl(imgSingle.sourceUrl)}
               className={`images image-${i + 1}`}>
               <img
                 src={imgSingle.sourceUrl}

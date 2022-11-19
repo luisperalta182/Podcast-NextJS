@@ -19,8 +19,7 @@
       "warn",
       {
         "namedComponents": "arrow-function"
-      },
-      "off"
+      }
     ],
     "array-callback-return": [
       "error",

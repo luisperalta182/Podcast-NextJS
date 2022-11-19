@@ -15,7 +15,6 @@ const NavMenu = ({ menu, header }) => {
             aria-label="Home Link"
             className="flex items-center my-[10px] relative w-[136px] h-[58px] md:w-[180px] md:h-[77px] md:my-[0px]">
             <img
-              role="img"
               src={header.mainLogo.sourceUrl}
               alt="Nicasource Logo"
               className="w-[100%] h-[100%] object-cover"

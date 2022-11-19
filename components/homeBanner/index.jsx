@@ -38,7 +38,6 @@ const HomeBanner = ({ trending, header }) => (
                   href={single.podcastAcf.listenOn.spotify}
                   className="flex items-center my-[10px] relative w-[130px] h-[50px] lg:my-[0px]">
                   <img
-                    role="img"
                     src={Spotify.src}
                     alt="Spotify Logo"
                   />
@@ -48,7 +47,6 @@ const HomeBanner = ({ trending, header }) => (
                   href={single.podcastAcf.listenOn.googlePodcasts}
                   className="flex items-center my-[10px] relative w-[208px] h-[50px] lg:my-[0px]">
                   <img
-                    role="img"
                     src={GooglePodcasts.src}
                     alt="Google Podcasts Logo"
                   />
@@ -58,7 +56,6 @@ const HomeBanner = ({ trending, header }) => (
                   href={single.podcastAcf.listenOn.applePodcasts}
                   className="flex items-center my-[10px] relative w-[208px] h-[50px] lg:my-[0px]">
                   <img
-                    role="img"
                     src={ApplePodcasts.src}
                     alt="Apple Podcasts Logo"
                   />
@@ -67,7 +64,6 @@ const HomeBanner = ({ trending, header }) => (
             </div>
             <div className="relative hidden w-full h-full md:inline lg:mt-[0px]">
               <img
-                role="img"
                 alt={header.homebanneImage.altText}
                 src={header.homebanneImage.sourceUrl}
                 className="w-[100%] h-[100%] object-cover"

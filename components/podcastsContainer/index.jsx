@@ -10,8 +10,6 @@ const PodcastsContainer = ({ podcasts }) => {
     setPostNum((prevPostNum) => prevPostNum + postPerLoad)
   }
 
-  const options = { year: 'numeric', month: 'short', day: 'numeric' }
-
   return (
     <div className="container mx-auto">
       <div className="bg-white rounded-[8px] shadow-[0px_20px_60px_rgba(62,62,62,0.0784314)] px-[10px] py-[40px] lg:mt-[-65px] lg:px-[70px] lg:py-[40px]">
@@ -37,6 +35,7 @@ const PodcastsContainer = ({ podcasts }) => {
         {postNum < podcasts.length && (
           <div className="flex justify-center content-center items-center">
             <button
+              type='button'
               aria-label="Show more episodes"
               onClick={loadMore}
               className="font-poppins text-center text-primary text-[14px] border border-1 border-primary rounded-[3px] px-[15px] py-[13px] focus:outline-none bg-white hover:bg-primary hover:text-white min-w-[165px] min-h-[50.5px]">

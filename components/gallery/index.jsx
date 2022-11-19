@@ -23,7 +23,6 @@ const Gallery = ({ gallery }) => {
               onClick={() => copyUrl(imgSingle.sourceUrl)}
               className={`images image-${i + 1}`}>
               <img
-                role="img"
                 src={imgSingle.sourceUrl}
                 alt={imgSingle.altText} />
             </div>

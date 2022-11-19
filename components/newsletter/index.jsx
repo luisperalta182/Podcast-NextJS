@@ -1,22 +1,13 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
-import { BsArrowRight } from 'react-icons/bs'
-import validator from 'validator'
+// import { BsArrowRight } from 'react-icons/bs'
 import Cf7FormWrapper from '../contactForm7'
 
 const Form = ({ handler }) => {
   const [formState, setFormState] = useState({})
-  const [confirm, setConfirm] = useState(null)
+  // const [confirm, setConfirm] = useState(null)
 
-  function isValidEmail(email) {
-    return /\S+@\S+\.\S+/.test(email)
-  }
-
-  // const handleFieldChange = (field, e) => {
-  //   setFormState({
-  //     ...formState,
-  //     [field]: e.target.value,
-  //   })
+  // function isValidEmail(email) {
+  //   return /\S+@\S+\.\S+/.test(email)
   // }
 
   const handleFieldChange = (field, e) => {
@@ -45,11 +36,11 @@ const Form = ({ handler }) => {
           className="font-poppins text-white text-[14px] leading-[21px] cursor-pointer inline-flex items-center px-[28px] py-[20px] bg-primary rounded-r-md border border-r-0 border-primary"
         />
       </div>
-      {confirm && (
+      {/* {confirm && (
         <div>
           <p>{confirm}</p>
         </div>
-      )}
+      )} */}
     </form>
   )
 }

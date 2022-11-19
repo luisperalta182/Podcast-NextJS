@@ -2,20 +2,14 @@ import React, { useState } from 'react'
 // import { BsArrowRight } from 'react-icons/bs'
 import Cf7FormWrapper from '../contactForm7'
 
-const Form = ({ handler }) => {
-  const [formState, setFormState] = useState({})
-  // const [confirm, setConfirm] = useState(null)
 
-  // function isValidEmail(email) {
-  //   return /\S+@\S+\.\S+/.test(email)
-  // }
+const Form = ({ handler, isSent, hasError }) => {
+  const [formState, setFormState] = useState({})
 
   const handleFieldChange = (field, e) => {
-    setFormState({
-      ...formState,
-      [field]: e.target.value,
-    })
+    setFormState({[field]: e.target.value})
   }
+
 
   const handleFormSubmit = (e) => {
     handler(e, formState)
@@ -36,11 +30,16 @@ const Form = ({ handler }) => {
           className="font-poppins text-white text-[14px] leading-[21px] cursor-pointer inline-flex items-center px-[28px] py-[20px] bg-primary rounded-r-md border border-r-0 border-primary"
         />
       </div>
-      {/* {confirm && (
-        <div>
-          <p>{confirm}</p>
+      {isSent &&
+        <div className='flex align-center justify-center my-[15px]'>
+          <p className='font-poppins text-[14px] text-center'>Sent</p>
         </div>
-      )} */}
+      }
+      {hasError &&
+        <div className='flex align-center justify-center my-[15px]'>
+          <p className='font-poppins text-[14px] text-center'>Please use a valid email</p>
+        </div>
+      }
     </form>
   )
 }

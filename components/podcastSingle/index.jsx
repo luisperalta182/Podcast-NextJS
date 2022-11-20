@@ -1,8 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import NewIcon from '../../public/newIcon.png'
 
 const PodcastSingle = ({ single, i }) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' }
+
+  console.log(single)
 
   return (
     <div
@@ -14,6 +17,9 @@ const PodcastSingle = ({ single, i }) => {
           src={single.featuredImage.node.sourceUrl}
           alt={single.featuredImage.altText}
         />
+          {single.podcastAcf.newEpisode && 
+             <img className='absolute top-[-5.26px] right-[10.18px] w-[26.8px]' src={NewIcon.src} alt="New Podcast Chapter" />
+          }
       </div>
 
       <div className="md:px-[10px] lg:flex">

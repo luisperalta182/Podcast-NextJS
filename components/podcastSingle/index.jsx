@@ -5,8 +5,6 @@ import NewIcon from '../../public/newIcon.png'
 const PodcastSingle = ({ single, i }) => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' }
 
-  console.log(single)
-
   return (
     <div
       key={i}
